@@ -70,10 +70,10 @@ URxvt*fading: 20
 URxvt*fadeColor: #2b303b
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters. The first font defines the cell size for characters; other fonts might be smaller, but not (in general) larger. A (hopefully) reasonable default font list is
-URxvt*font: terminus-14
+URxvt*font: xft:Inconsolata:pixelsize=14
 
 ! The font list to use for displaying bold, italic or bold italic characters, respectively.
-URxvt*boldItalicFont: terminus-oblique-14
+URxvt*boldItalicFont: xft:Inconsolata:pixelsize=14
 
 ! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
 URxvt*scrollBar: False
