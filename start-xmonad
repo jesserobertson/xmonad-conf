@@ -18,7 +18,7 @@
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # Load X resources (fixes some font issues)
-xrdb -merge .Xresources
+xrdb -merge .Xresources &
 
 # Start compositing to support transparency. You can omit this
 # if you prefer not to use any transparency, but it is likely to cause
@@ -28,7 +28,6 @@ xrdb -merge .Xresources
 
 # Enable power management and volume keys
 xfce4-volumed &
-xfce4-power-manager &
 
 #
 # LOAD SCREEN BACKGROUNDS
@@ -44,18 +43,8 @@ xscreensaver -no-splash &
 #
 
 # Activate primary screen 
-xrandr | grep 'LVDS1 connected' | ifne xrandr --output LVDS1 --auto --primary
-
-# If we find that a screen is connected via VGA, activate it and position it
-# to the left of the primary screen.
-xrandr | grep 'VGA1 connected' | ifne xrandr --output VGA1 --primary --auto 
-
-# If we find that a screen is connected via DVI, activate it and position it
-# to the left of the primary screen.
-xrandr | grep 'DP1 connected' | ifne xrandr --output DP1 --auto
-
-# If we find that a screen is connected via HDMI, activate it and position it to the left of the primary screen
-xrandr | grep 'HDMI1 connected' | ifne xrandr --output HDMI1 --auto
+xrandr --output DVI-I-1 --auto --primary 
+xrandr --output DP-0 --auto --rotate left --left-of DVI-I-1
 
 #
 # STARTUP ICON TRAY

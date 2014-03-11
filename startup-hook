@@ -18,6 +18,9 @@
 #      pidgin &
 # fi
 
+# Fix screen setup
+/home/jrobertson/bin/fix_screen &
+
 # Remmina remote desktop connection client (-i: start hidden)
 if [ -z "$(pgrep remmina)" ] ; then
     remmina -i &
@@ -25,7 +28,7 @@ fi
 
 # Network manager, so we don't have to configure wifi at the command line.
 if [ -z "$(pgrep wicd-client)" ] ; then
-    nm-applet &
+    wicd-gtk &
 fi
 
 # Applet for managing print jobs from the tray.
