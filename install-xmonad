@@ -15,10 +15,10 @@
 # do. Or, visit the repository for more information: 
 # https://github.com/davidbrewer/xmonad-ubuntu-conf
 # 
-# Author: David Brewer
+# Author: David Brewer, with modifications by Jess Robertson
 
 echo "Installing required packages..."
-sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar xcompmgr nitrogen moreutils synapse ssh-askpass-gnome thunar terminator remmina rxvt-unicode
+sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar xcompmgr nitrogen moreutils synapse ssh-askpass-gnome thunar terminator remmina rxvt-unicode fonts-inconsolata
 
 echo "Creating xmonad xsession configuration..."
 sudo mv /usr/share/xsessions/xmonad.desktop /usr/share/xsessions/xmonad.desktop.original
