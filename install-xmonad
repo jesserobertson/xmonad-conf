@@ -18,7 +18,7 @@
 # Author: David Brewer
 
 echo "Installing required packages..."
-sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar xcompmgr nitrogen moreutils synapse ssh-askpass-gnome thunar terminator remmina
+sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar xcompmgr nitrogen moreutils synapse ssh-askpass-gnome thunar terminator remmina rxvt-unicode
 
 echo "Creating xmonad xsession configuration..."
 sudo mv /usr/share/xsessions/xmonad.desktop /usr/share/xsessions/xmonad.desktop.original
